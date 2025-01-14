@@ -1,3 +1,3 @@
 #1337_42_POOL
 
-###let's do it!!!
+###The “pool” is a 4-week immersion in the coding world.
