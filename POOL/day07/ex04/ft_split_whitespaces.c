@@ -1,7 +1,8 @@
 #include	<stdlib.h>
-#include	<stdio.h>
+#include	<unistd.h>
 
 int	ft_check_whitespaces(char);
+int	ft_strlen(char *str);
 
 char**	ft_split_whitespaces(char *str)
 {
@@ -65,6 +66,19 @@ char**	ft_split_whitespaces(char *str)
 
 }
 
+int main(){
+	char **vector = ft_split_whitespaces("hicham nouaman\nhicham	omar\0");
+	int i = 0;
+	while(vector[i]){
+		write(1, "--------------------\n",21);
+		write(1, vector[i], ft_strlen(vector[i]));
+		write(1, "\n", 1);
+		write(1, "--------------------\n",21);
+		
+	i+=1;
+	}
+}
+
 int	ft_check_whitespaces(char c){
 	
 	if(c == ' ' || c == '\t' || c == '\n'){
@@ -74,3 +88,11 @@ int	ft_check_whitespaces(char c){
 
 }
 
+int	ft_strlen(char *str)
+{
+	int i = 0;
+	while(str[i]){
+	i+=1;
+	}
+	return i;
+}

@@ -3,7 +3,7 @@ int	ft_strlen(char *str);
 char*	ft_str_concat(char *dst, char *src)
 {
 	int i = 0;
-	if(dst[i] == 0){
+	if(dst[i] == '\0'){
 		while(src[i]){
 			dst[i] = src[i];
 		i++;

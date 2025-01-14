@@ -15,15 +15,15 @@ char*	ft_concat_params(int argc, char **argv)
 	i++;
 	}
 	ptr_s = malloc(sizeof(char) * size);
+	
 	i = 0;
 	while(i < argc){
 		ptr_s = ft_str_concat(ptr_s, argv[i]);
 
 	i++;
 	}
-
 	ptr_s[size]= '\0';
-
-	return ptr_s;
 	
+	return ptr_s;	
 }
+
