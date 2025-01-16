@@ -1,8 +1,4 @@
-#include	<unistd.h>
-#include	<stdio.h>
 #include	<stdlib.h>
-#include	<limits.h>
-
 
 int	ft_atoi(char *str){
 	
@@ -34,12 +30,6 @@ int	ft_atoi(char *str){
 				}
 			}
 		}
-	}
-	
-	
+	}	
 	return (result*sign);
-}
-
-int main(){
-	printf(      "%d\n", ft_atoi("   _8363927\0")       );
 }

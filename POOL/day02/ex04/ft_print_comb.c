@@ -1,6 +1,6 @@
 #include	<unistd.h>
 
-void	ft_print_str(int, int, int);
+void	ft_put_str(int, int, int);
 
 void	ft_print_comb(void)
 {
@@ -15,7 +15,7 @@ void	ft_print_comb(void)
 			c = b+1;
 			while(c <= 57)
 			{	
-				ft_print_str(a,b,c);
+				ft_put_str(a,b,c);
 			c+=1;
 			}
 		b+=1;
@@ -25,8 +25,10 @@ void	ft_print_comb(void)
 
 
 }
-////////////////////////////////////////////////
-void	ft_print_str(int a, int b, int c)
+
+
+//------------ put string -------------
+void	ft_put_str(int a, int b, int c)
 {
 	if(a != 55){
 		write(1, &a, 1);

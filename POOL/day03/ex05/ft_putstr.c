@@ -1,15 +1,8 @@
 #include	<unistd.h>
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char* str){
-
-	while(*str != '\0'){
-		ft_putchar(*str);		
-	str++;
+void	ft_putstr(char* str)
+{
+	while(*str){
+		write(1, str++, 1);
 	}
-}
-
-int main(){
-	ft_putstr("hicham\0");
 }

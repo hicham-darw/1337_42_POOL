@@ -1,9 +1,6 @@
 #include	<unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 void	ft_print_comb2(void)
 {
@@ -12,11 +9,9 @@ void	ft_print_comb2(void)
 	int ver = 44;
 	
 	a = 0;
-	while(a <= 98)
-	{
+	while(a <= 98){
 		b = a+1;
-		while(b <= 99)
-		{
+		while(b <= 99){
 			la = (a/10)+48; ra = (a%10)+48;
 			lb = (b/10)+48; rb = (b%10)+48;
 			
@@ -33,10 +28,4 @@ void	ft_print_comb2(void)
 		}
 	a+=1;
 	}
-
 }
-
-int main(){
-	ft_print_comb2();
-}
-
