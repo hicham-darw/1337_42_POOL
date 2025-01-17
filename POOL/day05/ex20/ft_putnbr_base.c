@@ -18,6 +18,5 @@ void	ft_putnbr_base(int nb, char *base)
 		ft_convert_to_octal(nb, base);
 	else
 		exit(0);
-
 }
 

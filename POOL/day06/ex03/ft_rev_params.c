@@ -8,8 +8,6 @@ void	ft_rev_params(int argc, char **argv);
 int	main(int argc, char **argv)
 {
 	ft_rev_params(argc, argv);
-
-
 	return 0;
 }
 
@@ -23,25 +21,9 @@ void	ft_rev_params(int argc, char **argv){
 		while(len-1 >= 0){
 			ft_putchar(argv[i][len-1]);
 		len--;
-		}	
+		}
+		ft_putchar('\n');	
 	i++;
 	}
 	
-}
-
-
-int ft_strlen(char * str){
-
-	int i = 0;
-	while(str[i]){
-	i++;
-	}
-	return i;
-
-}
-
-
-void	ft_putchar(char c){
-
-	write(1, &c, 1);
 }
