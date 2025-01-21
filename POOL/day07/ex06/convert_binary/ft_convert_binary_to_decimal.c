@@ -1,9 +1,10 @@
+#include	<stdlib.h>
+
+
 int	ft_strlen(char *str);
 int	ft_iterative_power(int n, int power);
 int	ft_nbrlen(int nb);
-char*	ft_convert_binary_to_decimal(char *nbr);
-///////// prototyped /////////////////////////
-
+//-------------prototyped-----------------------
 
 
 char* ft_convert_binary_to_decimal(char* nbr)
@@ -22,14 +23,14 @@ char* ft_convert_binary_to_decimal(char* nbr)
 	
 	len_res = ft_nbrlen(res);
 	ptr = (char*)malloc(sizeof(char) * len_res+1);
+	ptr[len_res] = '\0';
 	while(res >= 0 && len_res >= 0){
 	        r_res = res%10;
 		ptr[len_res] = r_res+48;
-		res = res/10;
-		len_res--;
+	res/=10;
+	len_res--;
 	}
-	ptr[len_res+1] == '\0';
-	
+
 	return ptr;
 }
 
