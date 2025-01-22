@@ -18,11 +18,3 @@ void	ft_sort_integer_table(int* tab, int size){
 	i++;
 	}
 }
-
-void ft_swap(int *a, int *b){
-
-	int temp;
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}

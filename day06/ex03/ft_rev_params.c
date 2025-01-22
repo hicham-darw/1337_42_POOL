@@ -12,11 +12,11 @@ int	main(int argc, char **argv)
 }
 
 
-void	ft_rev_params(int argc, char **argv){
-
-	int i = 1;
+void	ft_rev_params(int argc, char **argv)
+{
+	int i, len ;
+	i = 1;
 	while(argv[i] != NULL){
-		int j = 0;
 		int len = ft_strlen(argv[i]);
 		while(len-1 >= 0){
 			ft_putchar(argv[i][len-1]);

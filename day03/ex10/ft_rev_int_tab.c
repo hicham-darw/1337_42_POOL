@@ -14,11 +14,3 @@ void	ft_rev_int_tab(int *tab, int size)
 	i++;
 	}
 }
-
-void	ft_swap(int *a, int *b){
-
-	int temp;
-	temp = *a;
-	*a = *b;
-	*b = temp;
-}

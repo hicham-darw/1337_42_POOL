@@ -19,42 +19,25 @@ int	main(int argc, char **argv){
 
 void	ft_sort_params(int ac, char **av){
 
-	int i = 1;;
+	int i, j, b;
+	
+	i = 1;
 	while(av[i]){
-		int j = 0;
+		j = 0;
 		while(av[i][j]){
-			int b = j+1;
+			b = j+1;
 			while(av[i][b]){
-				if(av[i][j] > av[i][b]){
+				if(av[i][j] > av[i][b])
 					ft_swap(&av[i][j], &av[i][b]);
-				}
 			b++;
 			}
 		j++;
 		}
 		j = 0;
-		while(av[i][j]){
-			ft_putchar(av[i][j]);
-		j++;
-		}
+		while(av[i][j])
+			ft_putchar(av[i][j++]);
 		ft_putchar(32);
 	i+=1;
 	}
 	ft_putchar('\n');
-
-}
-
-void	ft_swap(char *a, char *b){
-
-	char temp;
-	temp = *a;
-	*a = *b;
-	*b = temp;
-
-}
-
-
-void	ft_putchar(char c){
-
-	write(1, &c, 1);
 }

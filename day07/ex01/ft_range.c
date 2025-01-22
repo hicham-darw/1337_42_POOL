@@ -1,6 +1,4 @@
-#include	<stdio.h>
 #include	<stdlib.h>
-
 
 int*	ft_range(int min, int max){
 
@@ -17,23 +15,4 @@ int*	ft_range(int min, int max){
 
 		return array;
 	}
-}
-
-int	main(void)
-{
-	int min = 3;
-	int *table = ft_range(min, 20);
-	
-	int i = 0;
-	while( i < 30 && table[i]) {
-		if(table[i+1] == 0){
-			printf(" %d\n", table[i]);
-		}else{
-			printf(" %d -", *(table+i));
-		}
-	i++;
-	}
-	free (table);
-
-	return 0;
 }
