@@ -1,8 +1,8 @@
 #include	<unistd.h>
-#include	<stdlib.h>
 
 
 void	ft_putchar(char);
+void	ft_putstr(char *);
 void	ft_swap(char*, char*);
 void	ft_sort_params(int, char**);
 
@@ -22,7 +22,7 @@ void	ft_sort_params(int ac, char **av){
 	int i, j, b;
 	
 	i = 1;
-	while(av[i]){
+	while(i < ac){
 		j = 0;
 		while(av[i][j]){
 			b = j+1;
@@ -33,11 +33,8 @@ void	ft_sort_params(int ac, char **av){
 			}
 		j++;
 		}
-		j = 0;
-		while(av[i][j])
-			ft_putchar(av[i][j++]);
-		ft_putchar(32);
-	i+=1;
+		ft_putstr(av[i]);
+		ft_putchar('\n');
+	i++;
 	}
-	ft_putchar('\n');
 }

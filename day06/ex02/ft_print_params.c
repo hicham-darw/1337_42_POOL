@@ -11,7 +11,7 @@ int	main(int argc, char **argv){
 void	ft_print_params(int argc, char **argv){
 	
 	int i = 1;
-	while(argv[i]){
+	while(i < argc){
 		int j = 0;
 		while(argv[i][j] != '\0'){
 			ft_putchar(argv[i][j]);
