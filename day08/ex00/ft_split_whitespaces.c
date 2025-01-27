@@ -4,7 +4,6 @@ char	*ft_strncpy(char *dst, char *src, int len);
 int	ft_check_whitespaces(char);
 int	ft_strlen(char *str);
 int	ft_count_vector(char *str);
-char	**ft_fill_vector(char **vec, char *str);
 //----------prototype-----------------------
 
 char**	ft_split_whitespaces(char *str)

@@ -2,6 +2,7 @@
 #define FT_H
 #include	<unistd.h>
 #include	<stdlib.h>
+
 int	ft_atoi(char *str);
 int	ft_iterative_power(int n, int power);
 void	ft_putchar(char c);
