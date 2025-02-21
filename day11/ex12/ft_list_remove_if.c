@@ -14,7 +14,7 @@ void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(char*, ch
 	
 	current = (*begin_list);
 	head = current;
-	while( (*begin_list) != NULL && (*begin_list)->next != NULL)
+	while((*begin_list)->next)
 	{
 		if( (cmp)((char*)(*begin_list)->next->data, (char*)data_ref) == 0 )
 		{
