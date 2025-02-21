@@ -6,14 +6,14 @@ void	ft_list_sort(t_list **begin_list, int (*cmp)(char*,char*))
 	void *temp;
 	int repeat;
 		
-	if( !(begin_list) || !(*begin_list))
+	if( !(begin_list))
 		return;
 	
 	temp = NULL;
 	ptr = (*begin_list);
 	head = (*begin_list);
 	repeat = 0;
-	while(	ptr->next )
+	while(	ptr->next != NULL)
 	{
 		if((cmp)((char*)ptr->data, (char*)ptr->next->data) > 0)
 		{
