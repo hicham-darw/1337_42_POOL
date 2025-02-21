@@ -4,13 +4,12 @@ int	ft_str_is_alpha(char *str)
 {	
 	if(str == NULL) 
 		return 1;
-	int i = 0;
-	while(str[i]){
-		if((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122)){
-			i++;
-		}else{
+	
+	while(*str)
+	{
+		if(  (*(str) > 90 && *(str) < 97) || (*(str) < 65) || (*(str) > 122)  )
 			return 0;
-		}
+		str++;
 	}
 	return 1;
 }

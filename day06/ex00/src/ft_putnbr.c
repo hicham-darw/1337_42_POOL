@@ -1,24 +1,27 @@
 #include	<unistd.h>
 
-
 void	ft_putnbr(int nb)
 {
-	int lnb, rnb;
-	int sign = -1;
+	int ln, rn;
 
-	if(nb >= 0)
+	if(nb == -2147483648)
 	{
-		lnb = (nb/10);
-		rnb = (nb%10)+48;
+		write(1, "-2147483648\0", 12);
+		return;
+	}
+	else if(nb >= 0)
+	{
+		ln = nb / 10 ;
+		rn = (nb % 10) + 48 ;
 		if(nb >= 10)
 		{
-			ft_putnbr(lnb);		
+			ft_putnbr(ln);		
 		}
-		write(1, &rnb, 1);
+		write(1, &rn, 1);
 	}
 	else
 	{
 		write(1, "-", 1);
-		ft_putnbr(nb*sign);
+		ft_putnbr(-nb);
 	}
 }

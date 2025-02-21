@@ -1,12 +1,17 @@
-int	ft_sqrt(int nb){
+int	ft_sqrt(int nb)
+{
+	int i;
 
-	int i = 1;
-	while(i <= nb/2){
+	if(nb == 0 || nb == 1)
+		return nb;
+	i = 1;
+	while(i <= nb/2)
+	{
 		if( i * i == nb)  
 			return i ;  
 		i++;
 	}
-	return 0;
-	
+
+	return 0;	
 }
 

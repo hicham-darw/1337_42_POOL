@@ -1,25 +1,33 @@
 #define	NULL ((void*)0)
 
 int	ft_strlen(char*);
-char*	ft_strcat(char *dst, char *src)
-{	
-	int i, k;
-	if(dst == NULL){
+
+char	*ft_strcat(char *dest, char *src)
+{
+	int i , j;
+	if(src == NULL)
+		return NULL;
+	if(dest == NULL)
+	{
 		i = 0;
-		while(src[i]){
-			dst[i] = src[i];
-		i++;
+		while(src[i])
+		{
+			dest[i] = src[i];
+			i++;
 		}
-		dst[i] = '\0';
-	}else{
-		i = ft_strlen(dst); 
-		k = 0;
-		while(src[k]){
-			dst[i] = src[k];
-		i++;
-		k++;
-		}
-		dst[i] = '\0';	
+		dest[i] = '\0';
 	}
-	return dst;
+	else
+	{
+		i = 0;
+		j = ft_strlen(dest);
+		while(src[i])
+		{
+			dest[j] = src[i];
+			j++;
+			i++;
+		}
+		dest[j] = '\0';	
+	}
+	return (dest);
 }

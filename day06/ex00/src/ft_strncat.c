@@ -2,28 +2,30 @@
 
 int	ft_strlen(char *str);
 
-char*	ft_strncat(char *dst, char *src, int nb)
+char	*ft_strncat(char *dest, char *src, int nb)
 {
 	int i , k;
-	if(dst == NULL){
+	if(dest == NULL)
+	{
 		i = 0;
-		while(i < nb && src[i]){
-			dst[i] = src[i];
-		i++;
+		while(i < nb && src[i])
+		{
+			dest[i] = src[i];
+			i++;
 		}
-		dst[i] = '\0';
-		return dst;
-	}else{
-
-		i = ft_strlen(dst);
-		k = 0;
-		while(k < nb && src[k]){
-			dst[i] = src[k];
-		k++;
-		i++;
-		}
-		
-		dst[i] = '\0';
-		return dst;
+		dest[i] = '\0';
 	}
+	else
+	{
+		i = ft_strlen(dest);
+		k = 0;
+		while(k < nb && src[k])
+		{
+			dest[i] = src[k];
+			k++;
+			i++;
+		}
+		dest[i] = '\0';
+	}
+	return dest;
 }

@@ -1,16 +1,18 @@
-char*	ft_strncpy(char *dst, char *src, unsigned int n)
-{
-	int i = 0;
-	while( i < n && src[i]){
-		dst[i] = src[i];
-	i+=1;
-	}
+#define NULL ((void*)0)
 
-	while(i < n){
-		dst[i] = '\0';
-	i+=1;
+char	*ft_strncpy(char *dst, char *src, unsigned int n)
+{
+	unsigned int i;
+	
+	if(src == NULL)
+		return NULL;
+	i  = 0;
+	while( i < n && src[i])
+	{
+		dst[i] = src[i];
+		i++;
 	}
+	dst[i] = '\0';
+
 	return (dst);
 }
-
-

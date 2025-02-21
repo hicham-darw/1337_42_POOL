@@ -16,11 +16,11 @@ void	ft_print_comb(void)
 			while(c <= 57)
 			{	
 				ft_put_str(a,b,c);
-			c+=1;
+				c+=1;
 			}
-		b+=1;
+			b+=1;
 		}
-	a+=1;
+		a+=1;
 	}
 
 
@@ -30,13 +30,15 @@ void	ft_print_comb(void)
 //------------ put string -------------
 void	ft_put_str(int a, int b, int c)
 {
-	if(a != 55){
+	if(a != 55)
+	{
 		write(1, &a, 1);
                 write(1, &b, 1);
                 write(1, &c, 1);
                 write(1, " ", 1);
                 write(1, ",", 1);
-	}else{
+	}else
+	{
                 write(1, &a, 1);
                 write(1, &b, 1);
                 write(1, &c, 1);

@@ -11,9 +11,3 @@ void	ft_print_alphabet(void)
 		i+=1;
 	}
 }
-
-int	main(void)
-{
-	ft_print_alphabet(void);
-
-}

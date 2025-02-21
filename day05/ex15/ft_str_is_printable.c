@@ -2,15 +2,14 @@
 
 int	ft_str_is_printable(char *str)
 {
-	int i ;
 	if(str == NULL) 
 		return 1;
-	i = 0;
-	while(str[i]){
-		if(str[i] < 32 || str[i] > 126)
+
+	while(*(str))
+	{
+		if(*(str) < 32 || *(str) > 126)
 			return 0;
-		else 
-			i+=1;
+		str++;
 	}
 	return 1;
 }
