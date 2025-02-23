@@ -2,16 +2,19 @@
 
 int	ft_strlen(char *str);
 
-
-char*	ft_strdup(char* src)
+char	*ft_strdup(char* src)
 {
 	char *ptr ;
+	int i;
+
 	ptr = malloc(sizeof(char) * ft_strlen(src)+1);
-	int i = 0;
+	if( !ptr )
+		return NULL;
+	i = 0;
 	while(src[i])
 	{
 		ptr[i] = src[i];
-	i++;
+		i++;
 	}
 	ptr[i] = '\0';
 	

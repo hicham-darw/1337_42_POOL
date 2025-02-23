@@ -1,4 +1,4 @@
-#define NULL ((void*)0)
+#include	<stddef.h>
 
 int	ft_check_overflow(int res, char c, int sign);
 

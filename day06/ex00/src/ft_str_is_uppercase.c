@@ -1,4 +1,4 @@
-#define NULL ((void*) 0)
+#include	<stddef.h>
 
 int	ft_str_is_uppercase(char *str)
 {

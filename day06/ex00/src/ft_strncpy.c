@@ -1,4 +1,4 @@
-#define NULL ((void*)0)
+#include	<stddef.h>
 
 char	*ft_strncpy(char *dst, char *src, unsigned int n)
 {

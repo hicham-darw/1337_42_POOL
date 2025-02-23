@@ -1,7 +1,7 @@
 int     ft_strcmp(char *s1, char *s2)
 {
 	int res, i;
-	
+		
 	i = 0;
 	res = 0;
 	while( s1[i] || s2[i] )

@@ -1,4 +1,4 @@
-#define NULL ((void*)0)
+#include	<stddef.h>
 
 char	*ft_strcpy(char* dst, char* src)
 {
