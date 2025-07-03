@@ -3,3 +3,4 @@ test[0-9]/
 
 #ignore test files
 test[0-9]
+.t*
