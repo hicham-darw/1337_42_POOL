@@ -1,2 +1,3 @@
-git status -s --ignored | grep "^!" | cut -c 4-
+#!/bin/bash
 
+git status -s --ignored | grep "^!" | cut -c 4-
