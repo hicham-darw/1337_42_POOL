@@ -1,5 +1,3 @@
-# remove hidden folder DS_store
-.DS*/
-
-# remove file my_work.c-
-*.c-
+# ignore .DS_store & my_work.c
+.DS_store
+my_work.c-
