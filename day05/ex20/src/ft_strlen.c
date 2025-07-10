@@ -1,10 +1,13 @@
+#include "../includes/my_lib.h"
+
 int	ft_strlen(char *str)
 {
-	int count ;
-	
-	count = 0 ;
-	while(str[count])
-		count++ ;
-	
-	return count ;
+	int	i;
+
+	if(!str)
+		return 0;
+	i = 0;
+	while(str[i])
+		i++;
+	return i;
 }

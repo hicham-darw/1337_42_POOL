@@ -5,7 +5,7 @@ int	ft_is_valid(char *base)
 	int	i;
 	int	j;
 
-	if (!base || ft_strlen(base) <= 1)
+	if (!base || ft_strlen(base) <= 1 || ft_strlen(base) > 16)
 		return 0;
 	i = 0;
 	while(base[i])
