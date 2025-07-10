@@ -1,8 +1,6 @@
-#define	NULL ((void*) 0)
-
 int	ft_str_is_printable(char *str)
 {
-	if(str == NULL) 
+	if(!str) 
 		return 1;
 
 	while(*(str))
