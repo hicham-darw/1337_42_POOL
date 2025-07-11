@@ -1,27 +1,24 @@
-#include	<stdlib.h>
-#include	<stdio.h>
-#include	<stdbool.h>
-
-int	ft_strcmp(char *s1, char *s2);
-int	ft_strlen(char *str);
-int	ft_atoi_binary(char *str);
-int	ft_atoi_decimal(char *str);
-int	ft_atoi_octal(char *str);
-int	ft_atoi_hexadecimal(char *str);
+#include "ft_atoi_base.h"
 
 int	ft_atoi_base(char *str, char *base)
 {
+	int	i;
+	int	sign;
 	
-	if(ft_strcmp(base, "01\0") == 0){
-		return ft_atoi_binary(str);				
-	}else if (ft_strcmp(base, "0123456789\0") == 0){
-		return ft_atoi_decimal(str);
-	}else if (ft_strcmp(base, "0123456789ABCDEF\0") == 0){
-		return ft_atoi_hexadecimal(str);
-	}else if (ft_strcmp(base, "01234567\0") == 0){
-		return ft_atoi_octal(str);
-	}else{ 
-		printf("error: \n");
-		return -1;
+
+	if (!str || !base || ft_strlen(base) <= 1)
+		return (0);
+	if (!ft_str_is_base(base))
+		return (0);
+	i = 0;
+	i = ft_skip_whitespaces(str);
+	sign = 1;
+	if (str[i] == '+' || str[i] == '-')
+	{
+		while (str[i] == '+' || str[i] == '-')
+			i++;
+		i--;
 	}
+	i += ft_skip_sign(str[i], &sign);
+	return (ft_get_int((str + i), base, sign));
 }
