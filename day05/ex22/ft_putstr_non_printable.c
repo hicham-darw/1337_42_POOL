@@ -1,7 +1,6 @@
 void	ft_putchar(char c);
 void	ft_put_hexa(char c);
 
-
 void	ft_putstr_non_printable(char *str)
 {
 	int	i;
