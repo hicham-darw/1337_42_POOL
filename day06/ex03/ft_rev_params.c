@@ -1,8 +1,6 @@
-#include	<unistd.h>
-#include	<stdlib.h>
-
 void	ft_putchar(char c);
 int	ft_strlen(char*);
+
 void	ft_rev_params(int argc, char **argv);
 
 int	main(int argc, char **argv)
@@ -14,16 +12,16 @@ int	main(int argc, char **argv)
 
 void	ft_rev_params(int argc, char **argv)
 {
-	int i, len ;
+	int	i;
+	int	len;
+
 	i = 1;
-	while(i < argc){
-		len = ft_strlen(argv[i]);
-		while(len-1 >= 0){
-			ft_putchar(argv[i][len-1]);
-		len--;
-		}
+	while(i < argc && argv[i])
+	{
+		len = ft_strlen(argv[i]) - 1;
+		while(len >= 0)
+			ft_putchar(argv[i][len--]);
 		ft_putchar('\n');	
-	i++;
+		i++;
 	}
-	
 }

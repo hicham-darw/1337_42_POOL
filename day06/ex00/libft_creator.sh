@@ -21,7 +21,7 @@ echo "dou you wanna delete all obj/*.o (y/n)?:"
 read choice
 
 if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
-	echo "deleting all files obj/..."
+	echo "deleting all files obj/*.o"
 	rm -f "$OBJ"/*.o
 else
 	echo "no files were deleted !"
