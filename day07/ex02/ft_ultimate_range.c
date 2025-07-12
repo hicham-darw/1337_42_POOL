@@ -2,8 +2,8 @@
 
 int	ft_ultimate_range(int **range, int min, int max)
 {
-	int *ptr;
-	int i;
+	int	*ptr;
+	int	i;
 
 	if(min >= max)
 	{
@@ -16,7 +16,7 @@ int	ft_ultimate_range(int **range, int min, int max)
 		if(!ptr)
 			return 0;
 		i = 0;
-		while(min < max )
+		while(min < max)
 		{
 			ptr[i] = min;
 			min++;
